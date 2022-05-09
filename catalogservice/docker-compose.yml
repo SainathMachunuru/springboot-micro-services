@@ -1,10 +1,13 @@
 version: '3'
 services:
-  mysqldb:
-    image: mysql:5.7
-    container_name: mysqldb
+  postgresql:
+    image: postgres:13
+    container_name: postgresqldb
     ports:
-      - "3306:3306"
+      - "5432:5432"
     environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: catalog
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test@123
+      POSTGRES_DB: catalog
+
+
